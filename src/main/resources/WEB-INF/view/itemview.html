@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Shop</title>
+</head>
+
+<body>
+    <div>
+        <img th:src="${product.imageSrc}" class="preview">
+        <div class="item-container">
+            <div th:text="${product.name}" class="itemname"></div>
+            <div th:text="${product.price}" class="itemprice"></div>
+            <tr th:text="${product.description}"></tr>
+            <button type="button" th:onclick="@{addToCart({id})(id=${product.ID})}">Add To Cart</button>
+        </div>
+    </div>
+</body>
+
+</html>
